@@ -39,7 +39,7 @@ export default function IndexPage({
   const [sortOrder, setSortOrder] = React.useState<SortOption>(
     () => sortOptions[Number(getFromSessionStorage('blog-sort')) || 0]
   );
-  const [isEnglish, setIsEnglish] = React.useState<boolean>(true);
+  const [isEnglish] = React.useState<boolean>(true);
   const isLoaded = useLoaded();
 
   const populatedPosts = useInjectContentMeta('blog', posts);

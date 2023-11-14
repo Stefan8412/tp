@@ -123,7 +123,7 @@ function SocialLinks() {
   );
 }
 
-const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
+/* const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
   [
     {
       href: 'https://clarence.link/um',
@@ -151,7 +151,7 @@ const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
       text: 'RSS',
       tooltip: 'Add theodorusclarence.com blog to your feeds',
     },
-  ];
+  ]; */
 
 type Social = {
   href: string;
