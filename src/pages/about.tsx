@@ -68,7 +68,7 @@ export default function AboutPage() {
             <h2>Vedenie</h2>
             <article className='prose mt-4 dark:prose-invert'>
               <ul>
-                <li>Luboš Micheľ - generálný manažér</li>
+                <li>Luboš Micheľ - generálny manažér</li>
               </ul>
             </article>
           </div>
@@ -76,9 +76,9 @@ export default function AboutPage() {
 
         <section>
           <div className='layout py-6'>
-            <h2>Contact</h2>
+            <h2>Kontakty</h2>
             <article className='prose mt-4 dark:prose-invert'>
-              <p>Kontaktné údaje</p>
+              <p>...kontaktné údaje doplníme...</p>
             </article>
           </div>
         </section>
