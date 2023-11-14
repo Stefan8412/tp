@@ -15,8 +15,8 @@ const newTeam = {
 };
 
 class LeagueTable extends Component {
-  constructor() {
-    super(null);
+  constructor(props) {
+    super(props);
     this.state = {
       round: 16,
     };
