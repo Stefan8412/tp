@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     if (
       window.location.host !==
         (process.env.NEXT_PUBLIC_BLOCK_DOMAIN_WHITELIST ||
-          'theodorusclarence.com') &&
+          'fctatranpresov.sk') &&
       blockDomainMeta
     ) {
       if (getFromLocalStorage('incrementMetaFlag') !== 'false') {

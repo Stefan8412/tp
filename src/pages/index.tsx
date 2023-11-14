@@ -56,14 +56,11 @@ export default function IndexPage({
           )}
         >
           <article className='layout'>
-            <h4 className='text-1xl md:text-4xl 2xl:text-3xl' data-fade='1'>
-              Oficiálna stránka
-            </h4>
             <h1
               className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
               data-fade='2'
             >
-              FC Tatran <Accent>Presov</Accent>
+              FC Tatran <Accent>Prešov</Accent>
             </h1>
             <p
               className={clsx(
@@ -72,7 +69,7 @@ export default function IndexPage({
               )}
               data-fade='3'
             >
-              Oficiálna stránka najstaršieho slovenského futbalového klubu FC
+              neoficiálna stránka najstaršieho slovenského futbalového klubu FC
               Tatran Prešov
             </p>
             {/* <p
