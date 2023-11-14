@@ -9,7 +9,7 @@ import useContentMeta from '@/hooks/useContentMeta';
 import useScrollSpy from '@/hooks/useScrollspy';
 
 import Accent from '@/components/Accent';
-import CarbonAds from '@/components/CarbonAds';
+//import CarbonAds from '@/components/CarbonAds';
 import LikeButton from '@/components/content/LikeButton';
 import MDXComponents from '@/components/content/MDXComponents';
 import TableOfContents, {
@@ -117,15 +117,15 @@ export default function SingleShortPage({ code, frontmatter }: LibraryType) {
               </aside>
             </section>
 
-            <CarbonAds className='mt-8' />
+            {/* <CarbonAds className='mt-8' /> */}
 
             <div className='mt-8 flex flex-col items-start gap-4 md:flex-row-reverse md:justify-between'>
-              <CustomLink
+              {/* <CustomLink
                 href={`https://github.com/theodorusclarence/theodorusclarence.com/blob/main/src/contents/shorts/${frontmatter.slug}.mdx`}
               >
                 Edit this on GitHub
-              </CustomLink>
-              <CustomLink href='/shorts'>← Back to shorts</CustomLink>
+              </CustomLink> */}
+              <CustomLink href='/shorts'>← Spät na oznamy</CustomLink>
             </div>
           </div>
         </section>

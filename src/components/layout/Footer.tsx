@@ -1,4 +1,3 @@
-import { FeedbackFish } from '@feedback-fish/react';
 import * as React from 'react';
 import { FiMail } from 'react-icons/fi';
 import { IconType } from 'react-icons/lib';
@@ -10,8 +9,6 @@ import useCopyToClipboard from '@/hooks/useCopyToClipboard';
 import Accent from '@/components/Accent';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Tooltip from '@/components/Tooltip';
-
-import { feedbackFlag } from '@/constants/env';
 
 import TechStack from '../TechStack';
 
@@ -28,7 +25,7 @@ export default function Footer() {
 
         <p className='mt-8 text-sm text-gray-600 dark:text-gray-300'>
           © Tatran Presov {new Date().getFullYear()}
-          {feedbackFlag && (
+          {/* {feedbackFlag && (
             <>
               {' • '}
               <FeedbackFish
@@ -39,7 +36,7 @@ export default function Footer() {
                 </button>
               </FeedbackFish>
             </>
-          )}
+          )} */}
         </p>
       </main>
     </footer>
@@ -161,7 +158,7 @@ type Social = {
 };
 const socials: Social[] = [
   {
-    href: 'https://clarence.link/linkedin',
+    href: 'https://www.facebook.com/fctatran/',
     icon: SiFacebook,
     id: 'Facebook',
     text: (
