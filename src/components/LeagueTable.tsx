@@ -39,7 +39,9 @@ class LeagueTable extends Component<IProps, IState> {
     const teams = {};
     for (let i = 0; i < this.state.round; i++) {
       const round = json[i];
-      round.forEach(function (match) {
+      round.forEach(function (match: {
+        substring: (arg0: number, arg1: number) => number;
+      }) {
         const team1 = match.substring(0, 3);
         const score1 = match.substring(3, 4) * 1; // performant string to number conversion
         const score2 = match.substring(5, 6) * 1;
@@ -68,7 +70,8 @@ class LeagueTable extends Component<IProps, IState> {
           teams[team2].won += 1;
           teams[team2].point += 3;
         }
-      }, this);
+      },
+      this);
     }
     const sortedTeams = Object.entries(teams).sort((teamA, teamB) => {
       if (teamA[1].point > teamB[1].point) {
