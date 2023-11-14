@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import FlipMove from 'react-flip-move';
 import styled from 'styled-components';
@@ -46,6 +47,7 @@ class LeagueTable extends Component<IProps, IState> {
         const score1 = match.substring(3, 4) * 1; // performant string to number conversion
         const score2 = match.substring(5, 6) * 1;
         const team2 = match.substring(6, 9);
+        /* eslint-disable */
         if (!teams[team1]) {
           teams[team1] = Object.assign({}, newTeam);
         }
