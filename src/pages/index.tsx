@@ -368,15 +368,14 @@ export async function getStaticProps() {
   const projects = await getAllFilesFrontmatter('projects');
   const shorts = await getAllFilesFrontmatter('library');
 
-  const featuredPosts = getFeatured(blogs, ['2022-retrospective']);
+  const featuredPosts = getFeatured(blogs, ['pre-snv', 'pre-povazska']);
   const featuredProjects = getFeatured(projects, ['hexcape']);
   const featuredShorts = getFeatured(shorts, [
-    'react/absolute-import',
-    'auth-context',
-    'mac/zsh',
+    'oznamy/liptpre',
+    'oznamy/presnv',
   ]);
 
-  const introPosts = getFeatured(blogs, ['2022-retrospective']);
+  const introPosts = getFeatured(blogs, ['pre-snv', 'pre-povazska']);
 
   return {
     props: {

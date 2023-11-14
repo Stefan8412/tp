@@ -19,7 +19,7 @@ import useInjectContentMeta from '@/hooks/useInjectContentMeta';
 import useScrollSpy from '@/hooks/useScrollspy';
 
 import Accent from '@/components/Accent';
-import CarbonAds from '@/components/CarbonAds';
+//import CarbonAds from '@/components/CarbonAds';
 import BlogCard from '@/components/content/blog/BlogCard';
 import Comment from '@/components/content/Comment';
 import LikeButton from '@/components/content/LikeButton';
@@ -223,7 +223,7 @@ export default function SingleBlogPage({
               title={frontmatter.title}
             /> */}
 
-            <CarbonAds className='mt-8' />
+            {/* <CarbonAds className='mt-8' /> */}
 
             <figure className='mt-12'>
               <Comment key={frontmatter.slug} />
