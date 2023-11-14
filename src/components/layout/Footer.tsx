@@ -46,7 +46,7 @@ export default function Footer() {
   );
 }
 
-function FooterLinks() {
+/* function FooterLinks() {
   return (
     <div className='flex flex-wrap justify-center gap-x-8 gap-y-4'>
       {footerLinks.map(({ href, text, tooltip }) => (
@@ -64,7 +64,7 @@ function FooterLinks() {
       ))}
     </div>
   );
-}
+} */
 
 function SocialLinks() {
   const [copyStatus, setCopyStatus] = React.useState<'idle' | 'copied'>('idle');

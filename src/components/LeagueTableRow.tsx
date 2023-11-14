@@ -8,12 +8,11 @@ class LeagueTableRow extends Component {
     const {
       position,
       name,
-      played,
+
       won,
       drawn,
       lost,
-      goalFor,
-      goalAgainst,
+
       point,
     } = this.props;
     return (

@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { InferGetStaticPropsType } from 'next';
 import * as React from 'react';
 
 import { sortByDate } from '@/lib/mdx.client';
@@ -10,9 +9,9 @@ import Accent from '@/components/Accent';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
-export default function ProjectsPage({
-  projects,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function ProjectsPage(/* {
+projects,
+}: InferGetStaticPropsType<typeof getStaticProps> */) {
   const isLoaded = useLoaded();
 
   return (

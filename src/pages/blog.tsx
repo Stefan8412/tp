@@ -18,8 +18,6 @@ import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 import SortListbox, { SortOption } from '@/components/SortListbox';
 
-import { BlogFrontmatter, InjectedMeta } from '@/types/frontmatters';
-
 const sortOptions: Array<SortOption> = [
   {
     id: 'date',
@@ -55,7 +53,7 @@ export default function IndexPage({
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
   };
-  const clearSearch = () => setSearch('');
+  //const clearSearch = () => setSearch('');
 
   React.useEffect(() => {
     const results = populatedPosts.filter(
@@ -119,7 +117,7 @@ export default function IndexPage({
     <Layout>
       <Seo
         templateTitle='Blog'
-        description='Thoughts, mental models, and tutorials about front-end development. Rebuild your mental model so front-end development can be predictable.'
+        description='články, rozhovory a reportáže zo stretnutí'
       />
 
       <main>

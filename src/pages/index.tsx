@@ -24,13 +24,13 @@ import Tooltip from '@/components/Tooltip';
 
 export default function IndexPage({
   featuredPosts,
-  featuredProjects,
+  // featuredProjects,
   featuredShorts,
   introPosts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const populatedPosts = useInjectContentMeta('blog', featuredPosts);
   const populatedIntro = useInjectContentMeta('blog', introPosts);
-  const populatedProjects = useInjectContentMeta('projects', featuredProjects);
+  // const populatedProjects = useInjectContentMeta('projects', featuredProjects);
   const populatedShorts = useInjectContentMeta('library', featuredShorts);
 
   const isLoaded = useLoaded();
