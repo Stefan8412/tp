@@ -1,4 +1,14 @@
-/* eslint-disable */
+// 👇️ ts-nocheck disables type checking for the entire file
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
+// 👇️ ts-ignore ignores any ts errors on the next line
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+function multiply(a, b) {
+  return a * b;
+}
+
 import React, { Component } from 'react';
 import FlipMove from 'react-flip-move';
 import styled from 'styled-components';
@@ -6,6 +16,7 @@ import styled from 'styled-components';
 import dataJson from './en.1.json';
 import LeagueTableRow from './LeagueTableRow';
 import RoundSelector from './RoundSelector';
+/* eslint-disable */
 const newTeam = {
   won: 0,
   drawn: 0,
@@ -32,11 +43,11 @@ class LeagueTable extends Component<IProps, IState> {
     };
   }
 
-  onRoundChange = (num: any) => {
+  onRoundChange = (num) => {
     this.setState({ round: num });
   };
 
-  renderRow = (json: any[]) => {
+  renderRow = (json) => {
     const teams = {};
     for (let i = 0; i < this.state.round; i++) {
       const round = json[i];
@@ -47,7 +58,7 @@ class LeagueTable extends Component<IProps, IState> {
         const score1 = match.substring(3, 4) * 1; // performant string to number conversion
         const score2 = match.substring(5, 6) * 1;
         const team2 = match.substring(6, 9);
-        /* eslint-disable */
+
         if (!teams[team1]) {
           teams[team1] = Object.assign({}, newTeam);
         }
