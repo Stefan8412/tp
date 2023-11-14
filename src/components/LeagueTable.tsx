@@ -13,11 +13,20 @@ const newTeam = {
   goalAgainst: 0,
   point: 0,
 };
+interface IProps {
+  id: string;
+}
 
-class LeagueTable extends Component {
-  constructor(props) {
+interface IState {
+  rendered: boolean;
+  round: number;
+}
+
+class LeagueTable extends Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props);
     this.state = {
+      rendered: false,
       round: 16,
     };
   }
