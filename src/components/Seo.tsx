@@ -4,12 +4,12 @@ import { useRouter } from 'next/router';
 import { openGraph } from '@/lib/helper.client';
 
 const defaultMeta = {
-  title: 'Theodorus Clarence',
-  siteName: 'theodorusclarence.com',
+  title: 'Tatran Presov',
+  siteName: 'tatranpresov.sk',
   description:
-    'An online portfolio and blog by Theodorus Clarence. Showcase of my projects, and some of my thoughts about website development.',
+    'An online portfolio and blog by Tatran Presov. Article,photos and interview with sport club.',
   url: 'https://theodorusclarence.com',
-  image: 'https://theodorusclarence.com/favicon/large-og.jpg',
+  //image: 'https://theodorusclarence.com/favicon/large-og.jpg',
   type: 'website',
   robots: 'follow, index',
 };
@@ -75,7 +75,7 @@ export default function Seo(props: SeoProps) {
           <meta
             name='author'
             property='article:author'
-            content='Theodorus Clarence'
+            content='Tatran Presov'
           />
         </>
       )}
@@ -92,7 +92,7 @@ export default function Seo(props: SeoProps) {
               author: [
                 {
                   '@type': 'Person',
-                  name: 'Theodorus Clarence',
+                  name: 'Tatran Presov',
                 },
               ],
               image: meta.image,

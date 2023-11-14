@@ -98,9 +98,9 @@ export default function Header({ large = false }: HeaderProps) {
 }
 
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/shorts', label: 'Shorts' },
-  { href: '/about', label: 'About' },
+  { href: '/', label: 'Domov' },
+  { href: '/blog', label: 'Články' },
+  { href: '/projects', label: 'A-tím' },
+  { href: '/shorts', label: 'Oznamy' },
+  { href: '/about', label: 'O klube' },
 ];

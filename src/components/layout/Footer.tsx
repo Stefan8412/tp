@@ -2,33 +2,32 @@ import { FeedbackFish } from '@feedback-fish/react';
 import * as React from 'react';
 import { FiMail } from 'react-icons/fi';
 import { IconType } from 'react-icons/lib';
-import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si';
+import { SiFacebook } from 'react-icons/si';
 
 import { trackEvent } from '@/lib/analytics';
 import useCopyToClipboard from '@/hooks/useCopyToClipboard';
 
 import Accent from '@/components/Accent';
-import Spotify from '@/components/layout/Spotify';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Tooltip from '@/components/Tooltip';
 
-import { feedbackFlag, spotifyFlag } from '@/constants/env';
+import { feedbackFlag } from '@/constants/env';
+
+import TechStack from '../TechStack';
 
 export default function Footer() {
   return (
     <footer className='mt-4 pb-2'>
       <main className='layout flex flex-col items-center border-t pt-6 dark:border-gray-600'>
-        <FooterLinks />
-
-        {spotifyFlag && <Spotify className='mt-8' />}
+        <TechStack />
 
         <p className='mt-12 font-medium text-gray-600 dark:text-gray-300'>
-          Reach me out
+          Kontakty
         </p>
         <SocialLinks />
 
         <p className='mt-8 text-sm text-gray-600 dark:text-gray-300'>
-          © Theodorus Clarence {new Date().getFullYear()}
+          © Tatran Presov {new Date().getFullYear()}
           {feedbackFlag && (
             <>
               {' • '}
@@ -82,17 +81,17 @@ function SocialLinks() {
           html={
             <div className='inline-block rounded-md border bg-white p-2 text-gray-600 shadow-md dark:border-gray-600 dark:bg-dark dark:text-gray-200'>
               {copyStatus === 'idle'
-                ? 'Click the mail logo to copy'
-                : 'Copied to clipboard 🥳'}
+                ? 'Skopírujte mail kliknutím na logo'
+                : 'Skopírované 🥳'}
               <Accent className='inline-block font-medium'>
-                me@theodorusclarence.com
+                stefan@hancar.sk
               </Accent>
             </div>
           }
         >
           <button
             onClick={() => {
-              copy('me@theodorusclarence.com').then(() => {
+              copy('stefan@hancar.sk').then(() => {
                 setCopyStatus('copied');
                 setTimeout(() => setCopyStatus('idle'), 1500);
               });
@@ -126,35 +125,6 @@ function SocialLinks() {
 
 const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
   [
-    {
-      href: 'https://github.com/theodorusclarence/theodorusclarence.com',
-      text: 'Source Code',
-      tooltip: (
-        <>
-          This website is <strong>open source</strong>!
-        </>
-      ),
-    },
-    {
-      href: '/design',
-      text: 'Design',
-      tooltip: 'theodorusclarence.com color palette',
-    },
-    {
-      href: 'https://clarence.link/docs',
-      text: 'Docs',
-      tooltip: 'Personal documentation about my best practices on development',
-    },
-    {
-      href: 'https://clarence.link/booknotes',
-      text: 'Book Notes',
-      tooltip: 'Note collection of books that I read',
-    },
-    {
-      href: 'https://clarence.link/starters',
-      text: 'Starter Templates',
-      tooltip: 'Starter that I build and use throughout my projects',
-    },
     {
       href: 'https://clarence.link/um',
       text: 'Analytics',
@@ -191,33 +161,12 @@ type Social = {
 };
 const socials: Social[] = [
   {
-    href: 'https://clarence.link/github',
-    icon: SiGithub,
-    id: 'Github',
-    text: (
-      <>
-        See my projects on <Accent className='font-medium'>Github</Accent>
-      </>
-    ),
-  },
-  {
     href: 'https://clarence.link/linkedin',
-    icon: SiLinkedin,
-    id: 'Linkedin',
+    icon: SiFacebook,
+    id: 'Facebook',
     text: (
       <>
-        Find me on <Accent className='font-medium'>Linkedin</Accent>
-      </>
-    ),
-  },
-  {
-    href: 'https://clarence.link/twt',
-    icon: SiTwitter,
-    id: 'Twitter',
-    text: (
-      <>
-        I post updates, tips, insight, and sometimes do some talk. Follow me on{' '}
-        <Accent className='font-medium'>Twitter</Accent>!
+        Kontaktujte nás na <Accent className='font-medium'>Facebooku</Accent>
       </>
     ),
   },

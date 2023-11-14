@@ -23,10 +23,10 @@ import { LibraryFrontmatter } from '@/types/frontmatters';
 const sortOptions: Array<SortOption> = [
   {
     id: 'name',
-    name: 'Sort by name',
+    name: 'Zoraď podľa mena',
     icon: HiSortAscending,
   },
-  { id: 'popular', name: 'Sort by popularity', icon: GiTechnoHeart },
+  { id: 'popular', name: 'Zoraď podľa popularity', icon: GiTechnoHeart },
 ];
 
 export default function ShortsPage({
@@ -110,16 +110,15 @@ export default function ShortsPage({
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout py-12'>
             <h1 className='text-3xl md:text-5xl' data-fade='0'>
-              <Accent>Shorts</Accent>
+              <Accent>Oznamy</Accent>
             </h1>
             <p className='mt-2 text-gray-600 dark:text-gray-300' data-fade='1'>
-              Short article that's not long enough to be a blog post, usually
-              comes from my personal notes.
+              Krátke oznamy o najbližších zápasoch, podujatiach...
             </p>
             <StyledInput
               data-fade='2'
               className='mt-4'
-              placeholder='Search...'
+              placeholder='hľadaj...'
               onChange={handleSearch}
               value={search}
               type='text'
@@ -128,7 +127,7 @@ export default function ShortsPage({
               className='mt-2 flex flex-wrap items-baseline justify-start gap-2 text-sm text-gray-600 dark:text-gray-300'
               data-fade='3'
             >
-              <span className='font-medium'>Choose topic:</span>
+              <span className='font-medium'>Vyberte tému:</span>
               <SkipNavTag>
                 {tags.map((tag) => (
                   <Tag

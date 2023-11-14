@@ -10,9 +10,7 @@ import useInjectContentMeta from '@/hooks/useInjectContentMeta';
 import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
-import Button from '@/components/buttons/Button';
 import BlogCard from '@/components/content/blog/BlogCard';
-import SubscribeCard from '@/components/content/blog/SubscribeCard';
 import ContentPlaceholder from '@/components/content/ContentPlaceholder';
 import Tag, { SkipNavTag } from '@/components/content/Tag';
 import StyledInput from '@/components/form/StyledInput';
@@ -25,12 +23,12 @@ import { BlogFrontmatter, InjectedMeta } from '@/types/frontmatters';
 const sortOptions: Array<SortOption> = [
   {
     id: 'date',
-    name: 'Sort by date',
+    name: 'Zoraď podľa dátumu',
     icon: HiCalendar,
   },
   {
     id: 'views',
-    name: 'Sort by views',
+    name: 'Zoraď podľa počtu videní',
     icon: HiEye,
   },
 ];
@@ -128,16 +126,16 @@ export default function IndexPage({
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout py-12'>
             <h1 className='text-3xl md:text-5xl' data-fade='0'>
-              <Accent>Blog {!isEnglish && 'Bahasa Indonesia'}</Accent>
+              {/* <Accent>Články {!isEnglish && 'Bahasa Indonesia'}</Accent> */}
+              <Accent>Články </Accent>
             </h1>
             <p className='mt-2 text-gray-600 dark:text-gray-300' data-fade='1'>
-              Thoughts, mental models, and tutorials about front-end
-              development.
+              rozhovory, hodnotenia a iné zaujímavé články
             </p>
             <StyledInput
               data-fade='2'
               className='mt-4'
-              placeholder='Search...'
+              placeholder='hľadaj...'
               onChange={handleSearch}
               value={search}
               type='text'
@@ -146,7 +144,7 @@ export default function IndexPage({
               className='mt-2 flex flex-wrap items-baseline justify-start gap-2 text-sm text-gray-600 dark:text-gray-300'
               data-fade='3'
             >
-              <span className='font-medium'>Choose topic:</span>
+              <span className='font-medium'>Vyberte tému:</span>
               <SkipNavTag>
                 {tags.map((tag) => (
                   <Tag
@@ -163,7 +161,7 @@ export default function IndexPage({
               className='relative z-10 mt-6 flex flex-col items-end gap-4 text-gray-600 dark:text-gray-300 md:flex-row md:items-center md:justify-between'
               data-fade='4'
             >
-              <Button
+              {/*  <Button
                 onClick={() => {
                   setIsEnglish((b) => !b);
                   clearSearch();
@@ -171,7 +169,7 @@ export default function IndexPage({
                 className='text-sm !font-medium'
               >
                 Read in {isEnglish ? 'Bahasa Indonesia' : 'English'}
-              </Button>
+              </Button> */}
               <SortListbox
                 selected={sortOrder}
                 setSelected={setSortOrder}
@@ -194,7 +192,7 @@ export default function IndexPage({
                 <ContentPlaceholder />
               )}
             </ul>
-            <SubscribeCard className='mt-8' />
+            {/*         <SubscribeCard className='mt-8' /> */}
           </div>
         </section>
       </main>

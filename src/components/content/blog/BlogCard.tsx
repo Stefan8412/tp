@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { format } from 'date-fns';
 import * as React from 'react';
 import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi';
 
@@ -35,13 +34,16 @@ export default function BlogCard({
     >
       <UnstyledLink
         className='block h-full rounded-md focus:outline-none focus-visible:ring focus-visible:ring-primary-300'
-        href={`/blog/${post.slug}`}
+        href={`/blog/${post?.slug}`}
       >
         <div className='relative'>
           <CloudinaryImg
             noStyle
             className='pointer-events-none overflow-hidden rounded-t-md'
-            publicId={`theodorusclarence/banner/${post.banner}`}
+            publicId={`${post?.banner}`}
+            //publicId={`theodorusclarence/banner/${post.banner}`}
+
+            // publicId='https://res.cloudinary.com/tatran/image/upload/v1699622360/banner/logo.png'
             alt='Photo taken from unsplash'
             width={1200}
             height={(1200 * 2) / 5}
@@ -54,7 +56,7 @@ export default function BlogCard({
               'mt-2 flex flex-wrap justify-end gap-x-2 gap-y-1 text-sm text-black dark:text-gray-100'
             )}
           >
-            {post.tags.split(',').map((tag) => (
+            {post?.tags.split(',').map((tag) => (
               <Tag
                 tabIndex={-1}
                 className='bg-opacity-80 dark:!bg-opacity-60'
@@ -66,11 +68,11 @@ export default function BlogCard({
           </div>
         </div>
         <div className='p-4'>
-          <h4 className='text-gray-800 dark:text-gray-100'>{post.title}</h4>
+          <h4 className='text-gray-800 dark:text-gray-100'>{post?.title}</h4>
           <div className='mt-2 flex items-center justify-start gap-2 text-sm font-medium text-gray-600 dark:text-gray-300'>
             <div className='flex items-center gap-1'>
               <HiOutlineClock className='inline-block text-base' />
-              <Accent>{post.readingTime.text}</Accent>
+              <Accent>{post?.readingTime.text}</Accent>
             </div>
             <div className='flex items-center gap-1'>
               <HiOutlineEye className='inline-block text-base' />
@@ -79,14 +81,14 @@ export default function BlogCard({
           </div>
           <p className='mb-2 mt-4 text-sm text-gray-600 dark:text-gray-300'>
             <span className='font-bold text-gray-800 dark:text-gray-100'>
-              {format(
-                new Date(post.lastUpdated ?? post.publishedAt),
+              {/*  {format(
+                new Date(post?.lastUpdated ?? post?.publishedAt),
                 'MMMM dd, yyyy'
-              )}
+              )} */}
             </span>
           </p>
           <p className='text-sm text-gray-700 dark:text-gray-300'>
-            {post.description}
+            {post?.description}
           </p>
         </div>
       </UnstyledLink>

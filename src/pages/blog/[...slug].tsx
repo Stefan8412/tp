@@ -21,7 +21,6 @@ import useScrollSpy from '@/hooks/useScrollspy';
 import Accent from '@/components/Accent';
 import CarbonAds from '@/components/CarbonAds';
 import BlogCard from '@/components/content/blog/BlogCard';
-import SubscribeCard from '@/components/content/blog/SubscribeCard';
 import Comment from '@/components/content/Comment';
 import LikeButton from '@/components/content/LikeButton';
 import MDXComponents from '@/components/content/MDXComponents';
@@ -32,7 +31,6 @@ import TableOfContents, {
 import CloudinaryImg from '@/components/images/CloudinaryImg';
 import Layout from '@/components/layout/Layout';
 import CustomLink from '@/components/links/CustomLink';
-import ShareTweetButton from '@/components/links/ShareTweetButton';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import Tooltip from '@/components/Tooltip';
@@ -58,7 +56,7 @@ export default function SingleBlogPage({
   //#region  //*=========== Link Constants ===========
   const COMMIT_HISTORY_LINK = `https://github.com/theodorusclarence/theodorusclarence.com/commits/main/src/contents/blog/${frontmatter.slug}.mdx`;
   const GITHUB_EDIT_LINK = `https://github.com/theodorusclarence/theodorusclarence.com/blob/main/src/contents/blog/${frontmatter.slug}.mdx`;
-  const OG_BANNER_LINK = `https://res.cloudinary.com/theodorusclarence/image/upload/f_auto,c_fill,ar_4:5,w_1200/theodorusclarence/banner/${frontmatter.banner}`;
+  const OG_BANNER_LINK = `https://res.cloudinary.com/tatran/image/upload/f_auto,c_fill,ar_4:5,w_1200/banner/${frontmatter.banner}`;
   //#endregion  //*======== Link Constants ===========
 
   //#region  //*=========== Blog Language ===========
@@ -114,7 +112,7 @@ export default function SingleBlogPage({
           <div className='layout'>
             <div className='pb-4 dark:border-gray-600'>
               <CloudinaryImg
-                publicId={`theodorusclarence/banner/${frontmatter.banner}`}
+                publicId={`${frontmatter.banner}`}
                 alt={`Photo from unsplash: ${frontmatter.banner}`}
                 width={1200}
                 height={(1200 * 2) / 5}
@@ -124,9 +122,9 @@ export default function SingleBlogPage({
               <h1 className='mt-4'>{frontmatter.title}</h1>
 
               <p className='mt-2 text-sm text-gray-600 dark:text-gray-300'>
-                Written on{' '}
-                {format(new Date(frontmatter.publishedAt), 'MMMM dd, yyyy')} by
-                Theodorus Clarence.
+                Publikované{' '}
+                {format(new Date(frontmatter.publishedAt), 'MMMM dd, yyyy ')}
+                Tatran Presov.
               </p>
               {frontmatter.lastUpdated && (
                 <div className='mt-2 flex flex-wrap gap-2 text-sm text-gray-700 dark:text-gray-200'>
@@ -219,11 +217,11 @@ export default function SingleBlogPage({
               </aside>
             </section>
 
-            <ShareTweetButton
+            {/* <ShareTweetButton
               className='mt-12'
               url={`https://theodorusclarence.com/blog/${frontmatter.slug}`}
               title={frontmatter.title}
-            />
+            /> */}
 
             <CarbonAds className='mt-8' />
 
@@ -234,7 +232,7 @@ export default function SingleBlogPage({
             {populatedRecommendations.length > 0 && (
               <div className='mt-20'>
                 <h2>
-                  <Accent>Other posts that you might like</Accent>
+                  <Accent>Iné zaujímavé články</Accent>
                 </h2>
                 <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
                   {populatedRecommendations.map((post, i) => (
@@ -251,13 +249,13 @@ export default function SingleBlogPage({
               </div>
             )}
 
-            <SubscribeCard className='mt-12' title='Enjoying this post?' />
+            {/* <SubscribeCard className='mt-12' title='Enjoying this post?' /> */}
 
             <div className='mt-8 flex flex-col items-start gap-4 md:flex-row-reverse md:justify-between'>
-              <CustomLink href={GITHUB_EDIT_LINK}>
+              {/*  <CustomLink href={GITHUB_EDIT_LINK}>
                 Edit this on GitHub
-              </CustomLink>
-              <CustomLink href='/blog'>← Back to blog</CustomLink>
+              </CustomLink> */}
+              <CustomLink href='/blog'>← Späť na články</CustomLink>
             </div>
           </div>
         </section>
