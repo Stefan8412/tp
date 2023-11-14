@@ -31,11 +31,11 @@ class LeagueTable extends Component<IProps, IState> {
     };
   }
 
-  onRoundChange = (num) => {
+  onRoundChange = (num: any) => {
     this.setState({ round: num });
   };
 
-  renderRow = (json) => {
+  renderRow = (json: any[]) => {
     const teams = {};
     for (let i = 0; i < this.state.round; i++) {
       const round = json[i];
