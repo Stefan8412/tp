@@ -157,6 +157,19 @@ export default function IndexPage({
           >
             <IoArrowDownOutline className='h-8 w-8 animate-bounce md:h-10 md:w-10' />
           </UnstyledLink>
+          <CloudinaryImg
+            className={clsx(
+              'absolute bottom-9 right-6',
+              'translate-y-[37%] transform-gpu',
+              'w-[calc(100%-3rem)] md:w-[600px] 2xl:w-[900px]',
+              'z-[-1] opacity-90 dark:opacity-30',
+              'inset=none'
+            )}
+            publicId='ultraspresov1'
+            alt='fans presov'
+            width='1200'
+            height='600'
+          />
         </section>
 
         <InView triggerOnce rootMargin='-40% 0px'>
