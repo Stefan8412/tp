@@ -8,9 +8,9 @@ export default function TechStack() {
       <CloudinaryImg
         className='float-right ml-6 w-40 md:w-72'
         publicId='gardenka'
-        width='500'
-        height='250'
-        alt='Photo of me'
+        width='350'
+        height='200'
+        alt='Gardenka'
         preview={false}
       />
       <CloudinaryImg
@@ -18,7 +18,7 @@ export default function TechStack() {
         publicId='nike'
         width='250'
         height='100'
-        alt='Photo of me'
+        alt='nike'
         preview={false}
       />
     </div>
