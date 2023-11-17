@@ -100,7 +100,7 @@ export default function Header({ large = false }: HeaderProps) {
 const links = [
   { href: '/', label: 'Domov' },
   { href: '/blog', label: 'Články' },
-  { href: '/projects', label: 'A-tím' },
+  { href: '/ateam', label: 'A-tím' },
   { href: '/shorts', label: 'Oznamy' },
   { href: '/about', label: 'O klube' },
 ];
