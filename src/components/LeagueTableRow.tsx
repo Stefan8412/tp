@@ -50,10 +50,10 @@ const Tr = styled.div`
   background-color: ${({ position }) =>
     position < 3
       ? '#86EFAC'
-      : position < 5
-      ? '#fff'
-      : position > 17
-      ? '#fff'
+      : position < 15
+      ? '#ecfdf5'
+      : position < 17
+      ? '#FF8A8A'
       : '#fff'};
 `;
 const TdPosName = styled.div`

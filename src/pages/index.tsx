@@ -251,7 +251,7 @@ export default function IndexPage({
                 <div className='h-full w-full'>
                   <ul className='relative h-full'>
                     <CloudinaryImg
-                      publicId='2.ligalogo'
+                      publicId='sfzlogo'
                       width='1500'
                       height='1695'
                     />
