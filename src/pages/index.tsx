@@ -194,7 +194,7 @@ export default function IndexPage({
                   <div className='mt-4 text-base text-gray-600 dark:text-gray-300 md:text-lg'>
                     V 17.kole druhej futbalovej ligy sme zviťazili nad
                     Liptovským Mikulášom 2:0, po góloch Jozefa Dolného a Borisa
-                    Gála
+                    Gálla
                   </div>
                 </div>
                 <div className='h-full w-full'>

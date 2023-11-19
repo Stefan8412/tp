@@ -53,7 +53,7 @@ projects,
                 </div>
                 <div className='mt-16'>
                   <h1 className='text-center text-lg font-semibold'>
-                    Marek Petruš-tréner
+                    <Accent>Marek Petruš-tréner</Accent>
                   </h1>
                   <p className='text-center text-sm text-gray-600'>
                     Predchádzajúce kluby
@@ -90,7 +90,7 @@ projects,
                 </div>
                 <div className='mt-16'>
                   <h1 className='text-center text-lg font-semibold'>
-                    Erik Havrila-asistent trénera
+                    <Accent>Erik Havrila-asistent trénera</Accent>
                   </h1>
                   <p className='text-center text-sm text-gray-600'></p>
                 </div>
