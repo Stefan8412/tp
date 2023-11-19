@@ -28,7 +28,6 @@ import Layout from '@/components/layout/Layout';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
-import Tooltip from '@/components/Tooltip';
 
 export default function IndexPage({
   featuredPosts,
@@ -189,24 +188,13 @@ export default function IndexPage({
                 <div className='mt-8 h-full w-full md:mt-0'>
                   <h2 className='text-4xl md:text-6xl'>
                     <Accent className='inline decoration-clone leading-snug dark:leading-none'>
-                      Prešov porazil Spišskú Novú Ves
+                      Prešov porazil Liptovský Mikuláš
                     </Accent>
                   </h2>
                   <div className='mt-4 text-base text-gray-600 dark:text-gray-300 md:text-lg'>
-                    <Tooltip
-                      withUnderline
-                      tipChildren={
-                        <>
-                          V sobotnajšom zápase druhej futbalovej ligy sme
-                          porazili Spišskú Novú Ves 2:O po dvoch góloch z
-                          penalty. O prvý sa postaral Jozef Dolný a druhý Pavol
-                          Gladiš
-                        </>
-                      }
-                    ></Tooltip>{' '}
-                    V sobotnajšom zápase druhej futbalovej ligy sme porazili
-                    Spišskú Novú Ves 2:O po dvoch góloch z penalty. O prvý sa
-                    postaral Jozef Dolný a druhý Pavol Gladiš
+                    V 17.kole druhej futbalovej ligy sme zviťazili nad
+                    Liptovským Mikulášom 2:0, po góloch Jozefa Dolného a Borisa
+                    Gála
                   </div>
                 </div>
                 <div className='h-full w-full'>
@@ -380,14 +368,14 @@ export async function getStaticProps() {
   const projects = await getAllFilesFrontmatter('projects');
   const shorts = await getAllFilesFrontmatter('library');
 
-  const featuredPosts = getFeatured(blogs, ['pre-snv', 'pre-povazska']);
+  const featuredPosts = getFeatured(blogs, ['pre-lmi', 'pre-snv']);
   const featuredProjects = getFeatured(projects, ['hexcape']);
   const featuredShorts = getFeatured(shorts, [
     'oznamy/liptpre',
     'oznamy/presnv',
   ]);
 
-  const introPosts = getFeatured(blogs, ['pre-snv', 'pre-povazska']);
+  const introPosts = getFeatured(blogs, ['pre-lmi', 'pre-snv']);
 
   return {
     props: {
