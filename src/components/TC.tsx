@@ -9,23 +9,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import Accent from './Accent';
 import LeagueTable from './LeagueTable';
 
 export default function TC() {
-  return (
-    <MainWrapper>
-      {' '}
-      <TableWrapper>
-        <h2 className='text-2xl md:text-4xl'>
-          <Accent>2. futbalová liga</Accent>
-        </h2>
-        <div>
-          <LeagueTable />
-        </div>
-      </TableWrapper>
-    </MainWrapper>
-  );
+  return <LeagueTable />;
 }
 
 /* const Title = styled.h1`

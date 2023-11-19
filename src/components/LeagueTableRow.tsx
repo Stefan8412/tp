@@ -7,7 +7,6 @@
 // @ts-ignore
 
 import React, { Component } from 'react';
-import styled from 'styled-components';
 
 import teamMapping from './team-mapping.json';
 // This needs to be a stateful component to work with react-flip-move
@@ -24,27 +23,35 @@ class LeagueTableRow extends Component {
       point,
     } = this.props;
     return (
-      <Tr position={position}>
-        <TdPosName style={{ width: '2em' }}>{position}</TdPosName>
-        <TdPosName style={{ textAlign: 'left', width: '8em' }}>
-          {teamMapping[name]}
-        </TdPosName>
-        <TdNumber style={{ borderLeft: 0 }}>{won + drawn + lost}</TdNumber>
-        <TdNumber>{won}</TdNumber>
-        <TdNumber>{drawn}</TdNumber>
-        <TdNumber>{lost}</TdNumber>
-        {/*      <TdNumber>{goalFor}</TdNumber>
+      <>
+        <tbody className='bg-gray-800'>
+          <tr className='bg-black bg-opacity-20'>
+            {' '}
+            <td className='pl-4'>{position}</td>
+            <td className='flex whitespace-nowrap px-6 py-4'>
+              {' '}
+              <span className='ml-2 font-medium'>{teamMapping[name]}</span>
+            </td>
+            <td className='whitespace-nowrap px-6 py-4'>
+              {won + drawn + lost}
+            </td>
+            <td className='whitespace-nowrap px-6 py-4'>{won}</td>
+            <td className='whitespace-nowrap px-6 py-4'>{drawn}</td>
+            <td className='whitespace-nowrap px-6 py-4'>{lost}</td>
+            {/*      <TdNumber>{goalFor}</TdNumber>
         <TdNumber>{goalAgainst}</TdNumber>
         <TdNumber>{goalFor - goalAgainst}</TdNumber> */}
-        <TdNumber>{point}</TdNumber>
-      </Tr>
+            <td className='whitespace-nowrap px-6 py-4'>{point}</td>
+          </tr>
+        </tbody>
+      </>
     );
   }
 }
 
 export default LeagueTableRow;
 
-const Tr = styled.div`
+/* const Tr = styled.div`
   display: flex;
   flex-direction: row;
   background-color: ${({ position }) =>
@@ -55,8 +62,8 @@ const Tr = styled.div`
       : position < 17
       ? '#FF8A8A'
       : '#fff'};
-`;
-const TdPosName = styled.div`
+`; */
+/* const TdPosName = styled.div`
   padding: 0.5em;
   border-bottom: solid #360037 1px;
 `;
@@ -68,3 +75,4 @@ const TdNumber = styled.div`
   border-top: 0;
   border-right: 0;
 `;
+ */

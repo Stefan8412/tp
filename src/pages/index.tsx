@@ -245,8 +245,10 @@ export default function IndexPage({
                 )}
                 data-fade='0'
               >
-                <div className='h-full w-full'>
-                  <TC />
+                <div className='mt-8 h-full w-full md:mt-0'>
+                  <div className='mt-4 text-base text-gray-600 dark:text-gray-300 md:text-lg'>
+                    <TC />
+                  </div>
                 </div>
                 <div className='h-full w-full'>
                   <ul className='relative h-full'>

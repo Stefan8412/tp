@@ -39,7 +39,7 @@ class LeagueTable extends Component<IProps, IState> {
     super(props);
     this.state = {
       rendered: false,
-      round: 16,
+      round: 17,
     };
   }
 
@@ -96,58 +96,52 @@ class LeagueTable extends Component<IProps, IState> {
       }
     });
     return sortedTeams.map((team, index) => (
-      <LeagueTableRow
-        {...team[1]}
-        key={team[0]}
-        position={index + 1}
-        name={team[0]}
-      />
+      <>
+        <LeagueTableRow
+          {...team[1]}
+          key={team[0]}
+          position={index + 1}
+          name={team[0]}
+        />
+      </>
     ));
   };
 
   render() {
     return (
-      <div>
-        <RoundSelector onRoundChange={this.onRoundChange} />
-        <Table>
-          <TableHeader />
-          <FlipMove duration={750} easing='ease-out'>
-            {this.renderRow(dataJson)}
-          </FlipMove>
-        </Table>
-      </div>
+      <>
+        <div className='mt-6 flex flex-col'>
+          <div className='-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
+            <div className='inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8'>
+              <div className='overflow-hidden shadow sm:rounded-lg'>
+                <table className='min-w-full text-sm text-gray-400'>
+                  <FlipMove duration={750} easing='ease-out'>
+                    {this.renderRow(dataJson)}
+                  </FlipMove>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
     );
   }
 }
 
 export default LeagueTable;
 
-const Table = styled.div`
+/* const Table = styled.div`
   letter-spacing: 0.02em;
   display: flex;
   flex-direction: column;
-`;
-const TableHeader = () => (
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'row-reverse',
-    }}
-  >
-    {' '}
-    <Th>B</Th>
-    {/*  <Th>GD</Th>
-    <Th>GA</Th>
-    <Th>GF</Th> */}
-    <Th>P</Th>
-    <Th>R</Th>
-    <Th>V</Th>
-    <Th>Z</Th>
-  </div>
-);
+`; */
+/* const TableHeader = () => (
+  <thead className='bg-gray-800 text-xs font-medium uppercase'></thead>
+); */
 
-const Th = styled.div`
+/* const Th = styled.div`
   width: 3em;
 
   font-weight: 400;
 `;
+ */
