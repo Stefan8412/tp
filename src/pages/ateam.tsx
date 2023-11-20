@@ -6,7 +6,7 @@ import { getAllFilesFrontmatter } from '@/lib/mdx.server';
 import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
-import CloudinaryImg from '@/components/images/CloudinaryImg';
+import ProfileCard from '@/components/content/ateam/ProfileCard';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
@@ -31,71 +31,37 @@ projects,
             <p data-fade='1' className='mt-2 text-gray-600 dark:text-gray-300'>
               na stránke sa pracuje
             </p>
-            <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-              <div className='mx-auto my-12 w-full items-center justify-center overflow-hidden rounded-lg bg-white pb-6 shadow-sm md:max-w-sm'>
-                <div className='relative h-20'>
-                  <CloudinaryImg
-                    className='absolute h-full w-full object-cover'
-                    publicId='ultraspresov'
-                    height='400'
-                    width='400'
-                    alt='bla'
-                  />
-                </div>
-                <div className='relative -my-12 mx-auto h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow'>
-                  <CloudinaryImg
-                    className='h-full w-full object-cover'
-                    publicId='logoold'
-                    height='400'
-                    width='400'
-                    alt='bla'
-                  />
-                </div>
-                <div className='mt-16'>
-                  <h1 className='text-center text-lg font-semibold'>
-                    <Accent>Marek Petruš-tréner</Accent>
-                  </h1>
-                  <p className='text-center text-sm text-gray-600'>
-                    Predchádzajúce kluby
-                  </p>
-                </div>
-                <div className='mx-6 mt-6 flex flex-wrap border-t pt-3'>
-                  <div className='my-1 mr-2 cursor-default border border-indigo-600 px-2 text-xs uppercase tracking-wider text-indigo-600 hover:bg-indigo-600 hover:text-indigo-100'>
-                    Zemplin Michalovce
-                  </div>
-
-                  <div className='my-1 mr-2 cursor-default border border-indigo-600 px-2 text-xs uppercase tracking-wider text-indigo-600 hover:bg-indigo-600 hover:text-indigo-100'>
-                    Liptovský Mikuláš
-                  </div>
-                </div>
-              </div>
-              <div className='mx-auto my-12 w-full items-center justify-center overflow-hidden rounded-lg bg-white pb-6 shadow-sm md:max-w-sm'>
-                <div className='relative h-20'>
-                  <CloudinaryImg
-                    className='absolute h-full w-full object-cover'
-                    publicId='ultraspresov'
-                    height='400'
-                    width='400'
-                    alt='bla'
-                  />
-                </div>
-                <div className='relative -my-12 mx-auto h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow'>
-                  <CloudinaryImg
-                    className='h-full w-full object-cover'
-                    publicId='logoold'
-                    height='400'
-                    width='400'
-                    alt='bla'
-                  />
-                </div>
-                <div className='mt-16'>
-                  <h1 className='text-center text-lg font-semibold'>
-                    <Accent>Erik Havrila-asistent trénera</Accent>
-                  </h1>
-                  <p className='text-center text-sm text-gray-600'></p>
-                </div>
-                <div className='mx-6 mt-6 flex flex-wrap border-t pt-3'></div>
-              </div>
+            <div className='grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+              <ProfileCard
+                name='Marek Petrus'
+                position='tréner'
+                club1='Slovakia'
+              />
+              <ProfileCard
+                name='Erik Havrila'
+                position='asistent'
+                club1='Slovakia'
+              />
+              <ProfileCard
+                name='Jozef Dolný'
+                position='útočník'
+                club1='Slovakia'
+              />
+              <ProfileCard
+                name='Martin Baran'
+                position='obranca'
+                club1='Slovakia'
+              />
+              <ProfileCard
+                name='Boris Gáll'
+                position='záložník'
+                club1='Slovakia'
+              />
+              <ProfileCard
+                name='Maksym Kuchynskyi'
+                position='brankár'
+                club1='Ukraine'
+              />
             </div>
           </div>
         </section>
