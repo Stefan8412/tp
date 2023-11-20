@@ -278,7 +278,7 @@ export default function IndexPage({
                     trackEvent('Home: See more post', { type: 'navigate' })
                   }
                 >
-                  dalšie
+                  ďalšie
                 </ButtonLink>
               </article>
             </section>
@@ -350,7 +350,7 @@ export default function IndexPage({
                     trackEvent('Home: See more shorts', { type: 'navigate' })
                   }
                 >
-                  dalšie
+                  ďalšie
                 </ButtonLink>
               </article>
             </section>

@@ -16,7 +16,7 @@ const defaultMeta = {
   siteName: 'tatranpresov.sk',
   description:
     'An online portfolio and blog by Tatran Presov. Article,photos and interview with sport club.',
-  url: 'https://theodorusclarence.com',
+  url: 'https://fctatranpresov.netlify.app',
   //image: 'https://theodorusclarence.com/favicon/large-og.jpg',
   type: 'website',
   robots: 'follow, index',
