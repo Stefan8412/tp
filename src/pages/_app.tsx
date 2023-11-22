@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     if (
       window.location.host !==
         (process.env.NEXT_PUBLIC_BLOCK_DOMAIN_WHITELIST ||
-          'fctatranpresov.sk') &&
+          'fctatranpresov.netlify.app') &&
       blockDomainMeta
     ) {
       if (getFromLocalStorage('incrementMetaFlag') !== 'false') {
