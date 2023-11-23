@@ -13,7 +13,7 @@ import { openGraph } from '@/lib/helper.client';
 
 const defaultMeta = {
   title: 'Tatran Presov',
-  siteName: 'tatranpresov.sk',
+  siteName: 'fctatranpresov.netlify.app',
   description:
     'An online portfolio and blog by Tatran Presov. Article,photos and interview with sport club.',
   url: 'https://fctatranpresov.netlify.app',

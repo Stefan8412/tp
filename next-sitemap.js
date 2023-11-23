@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://theodorusclarence.com/',
+  siteUrl: 'https://fctatranpresov.netlify.app/',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],
